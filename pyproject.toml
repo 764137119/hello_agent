@@ -1,0 +1,24 @@
+[project]
+name = "hello_agent"
+version = "0.1.0"
+description = "hello-agent using crewAI"
+authors = [{ name = "wangyingwen", email = "764137119@qq.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]==1.14.7"
+]
+
+[project.scripts]
+hello_agent = "hello_agent.main:run"
+run_crew = "hello_agent.main:run"
+train = "hello_agent.main:train"
+replay = "hello_agent.main:replay"
+test = "hello_agent.main:test"
+run_with_trigger = "hello_agent.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
