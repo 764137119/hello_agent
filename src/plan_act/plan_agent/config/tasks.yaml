@@ -1,0 +1,12 @@
+planning_task:
+  description: >
+    Create a detailed plan for: {topic}
+    Break it down into clear, actionable steps.
+    Consider timeline, resources needed, and potential risks.
+  expected_output: >
+    A detailed plan with 5-10 steps, each step including:
+    - What needs to be done
+    - Expected outcome
+    - Dependencies (if any)
+    Format as markdown.
+  agent: planner

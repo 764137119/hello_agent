@@ -1,0 +1,13 @@
+execution_task:
+  description: >
+    Execute the following plan step by step:
+    
+    {plan}
+    
+    Complete each step thoroughly. Report progress after each step.
+  expected_output: >
+    A complete execution report with:
+    - Each step executed
+    - Results achieved
+    - Any challenges encountered and how they were resolved
+  agent: executor
