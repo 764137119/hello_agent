@@ -9,6 +9,8 @@ class HelloAgent():
 
     agents: list[BaseAgent]
     tasks: list[Task]
+    agents_config="config/agents.yaml"
+    tasks_config="config/tasks.yaml"
 
     @agent
     def researcher(self) -> Agent:
