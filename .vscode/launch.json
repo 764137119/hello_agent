@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug CrewAI (crewai run)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "crewai",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "args": ["run"],
+      "env": {
+        "OPENAI_API_KEY": "${env:OPENAI_API_KEY}"
+      }
+    }
+  ]
+}

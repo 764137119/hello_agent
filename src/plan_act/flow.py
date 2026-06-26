@@ -9,7 +9,6 @@ class PlanActState(BaseModel):
     plan: str = ""
     result: str = ""
 
-
 class PlanActFlow(Flow[PlanActState]):
 
     @start()

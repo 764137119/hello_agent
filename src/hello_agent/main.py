@@ -5,6 +5,7 @@ import warnings
 from datetime import datetime
 
 from hello_agent.crew import HelloAgent
+from plan_act.flow import PlanActFlow
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
@@ -19,7 +20,8 @@ def run():
     }
 
     try:
-        HelloAgent().crew().kickoff(inputs=inputs)
+        #HelloAgent().crew().kickoff(inputs=inputs)
+        PlanActFlow().plan_and_review()
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 

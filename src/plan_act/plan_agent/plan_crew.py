@@ -1,6 +1,7 @@
-from crewai import Task,Agent,Crew,Process
+from crewai import Task,Agent,Crew,Process,LLM
 from crewai.project import CrewBase,crew,agent,task
 from crewai.agents.agent_builder.base_agent import BaseAgent
+from . import local_llm
 
 @CrewBase
 class PlanCrew:
@@ -19,6 +20,7 @@ class PlanCrew:
     def planner(self)->Agent:
         return Agent(
             config=self.agents_config["planner"],# type: ignore[index]
+            llm=local_llm,
              verbose=True
         )
     @crew
